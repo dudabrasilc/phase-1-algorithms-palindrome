@@ -1,9 +1,28 @@
+// Write a function that takes a string as an argument and returns true if the string is a palindrome, for example: "mom" and it returns false otherwise.
+
 function isPalindrome(word) {
-  // Write your algorithm here
+  // loop through the letters of word, from left to right and push them into an array
+  let leftToRight = [];
+  for (let i = 0; i < word.length; i++) {
+    leftToRight.push(word[i])
+  }
+  let rightToLeft = [];
+  // loop through the letters of word, from right to left and push them into an array
+  for (let i = word.length - 1; i >= 0; i--) {
+    rightToLeft.push(word[i])
+  }
+  // turn arrays into string and compare them
+  return leftToRight.join("") === rightToLeft.join("")
 }
+
+// function isPalindrome(word) {
+//   const reverseWord = word.split("").reverse().join("")
+//   return word === reverseWord
+// }
 
 /* 
   Add your pseudocode here
+
 */
 
 /*
